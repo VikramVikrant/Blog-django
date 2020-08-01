@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = '61q6&35yk-q*o3o9e@k3_&p8*=pj+_wsswo&p1@#))u%9#l*aj'
 SECRET_KEY= os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['wyblogs.herokuapp.com']
 
